@@ -1,0 +1,80 @@
+.l-services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    width: 1024px;
+    .service__container{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .service__item{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            margin: 10px;
+            height: 300px;
+            border: 1px solid rgba($color: gray, $alpha: 0.4);
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: -4px 6px 10px rgba($color: black, $alpha: .5);
+            .service__item-info{
+                    padding: 20px;
+                    .service__item-category{
+                        font-weight: bold;
+                        font-size: 34px;
+                    }
+            }
+            .service__item-image{
+                position: absolute;
+                right: 10px;
+                top: 20px;
+                width: 70%;
+                z-index: 2;
+                img{
+                    width: 100%;
+                }
+            }
+           .service__item-btn{
+               position: absolute;
+               bottom: 50px;
+               left: 30px;
+               font-weight: bold;
+               font-size: 18px;
+               display: flex;
+               flex-direction: column;
+
+               >a{
+                   color: blue;
+               }
+
+                .service__item-line{
+                   width: 100px;
+                   height: 2px;
+                   background-color: blue;
+                }    
+            }
+
+            &:hover{
+                cursor: pointer;
+                background-color: rgba($color: blue, $alpha: .3);
+                .service__item-info{
+                    .service__item-category, .service__item-season{
+                        color: white;
+                    }
+                }
+                .service__item-btn{
+                    >a{
+                        color: white;
+                    }
+                    .service__item-line{
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+}
